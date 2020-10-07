@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div id="header_add">
+      <head>
+        <h1><%= title %></h1>
+      </head>
+    </div>
+    <div id="body_add">
+      <div role="main">
+        <form id="addForm" method="post" action="/add">
+          <table>
+            <tr><th>TITLE</th></tr>
+            <tr><td><input type="text" name="title" size=80></td></tr>
+            <tr><th>URL</th></tr>
+            <tr><td><input type="text" name="url" size=80></td></tr>
+            <tr><th>CONTENT</th></tr>
+            <tr><td><textarea name="content" cols="80" rows="15"></textarea></td></tr>
+            <tr><th><input type="submit" value="送信"></th></tr>
+          </table>
+        </form>
+        <p id="top_anchor_add"><a href="/">&lt;&lt; Topへ戻る</a></p>
+      </div>
+    </div>
+  </body>
+</html>

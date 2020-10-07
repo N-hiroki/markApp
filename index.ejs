@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div id="header">
+      <h1><%= title %></h1>
+    </div>
+    <div id="body">
+      <p id="message">Hi, <span class="login_name"><%= login.name %></span>!<br>Welcome to <%= title %></p>
+      <form action="/" method="post" id="indexForm">
+        <input type="text" name="find" id="find" size="40" value="<%= form.find %>">
+        <input type="submit" value="検索">
+      </form>
+      <p><a href="/add">データを登録</a></p>
+      <p id="newData"><%= message %></p>
+    <ul>
+      <% for (var i in content){ %>
+        <% if (content[i].attributes.user_id != login.id){ continue; }%>
+        <li><a href="/mark/<%=content[i].id %>" class="dataList"><%=content[i].attributes.title %></a></li>
+      <% } %>
+    </ul>
+    <p></p>
+    </div>
+  </body>
+</html>

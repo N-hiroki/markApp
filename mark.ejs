@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div id="header">
+      <h1><%= title %></h1>
+      <h2 id="articleTitle"><%= head %></h2>
+      <p class="urlPosition"><a href="<%= url %>"><%= url %></a></p>
+    </div>
+    <div id="body">
+      <!-- <form method="post" action="/mark/<%=id %>">
+        <table>
+          <tr><th>SOURCE</th></tr>
+          <tr><td>
+            <textarea name="source" cols="60" rows="5"><%=source %></textarea>
+          </td></tr>
+          <tr><th><input type="submit" value="Update"></th></tr>
+        </table>
+      </form> -->
+      <!-- 改行で改行しない。 -->
+      <div class="mark_area marginReset articleArea"><%- content %>
+        <p><%=footer %></p></div>
+      <p id="top_anchor_mark"><a href="/" >&lt;&lt; Topへ戻る</a></p>
+    </div>
+  </body>
+</html>
